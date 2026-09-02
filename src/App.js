@@ -5,11 +5,16 @@ import profilePic from "./WhatsApp Image 2025-04-14 at 11.30.49 AM.jpeg";
 
 function Home() {
   return (
-    <div className="hero">
+    <main className="hero" role="main">
       <div className="overlay">
-        <div className="card animated fadeInUp">
+        <article className="card animated fadeInUp">
           {/* Profile Picture */}
-          <img src={profilePic} alt="Profile" className="profile-pic" />
+          <img
+            src={profilePic}
+            alt="Ganesh Bhosale - profile"
+            className="profile-pic"
+            loading="lazy"
+          />
 
           <h1 className="name">Ganesh Bhosale</h1>
           <p className="description">
@@ -18,63 +23,70 @@ function Home() {
             programming, and building scalable tech solutions.
           </p>
 
-          <h2 className="section-title">Education</h2>
-          <p className="info-item">
-            <strong>B.E, Information Technology</strong>
-            <br />
-            Savitribai Phule Pune University (2023 – 2027)
-          </p>
+          <section aria-labelledby="education">
+            <h2 id="education" className="section-title">Education</h2>
+            <p className="info-item">
+              <strong>B.E, Information Technology</strong>
+              <br />
+              Savitribai Phule Pune University (2023 – 2027)
+            </p>
+          </section>
 
-          <h2 className="section-title">Hobbies</h2>
-          <p className="info-item">
-            <strong>
+          <section aria-labelledby="hobbies">
+            <h2 id="hobbies" className="section-title">Hobbies</h2>
+            <ul className="info-item">
               <li>Competitive Programming</li>
               <li>Reading</li>
               <li>Music</li>
-              </strong> 
-                     <br />
-          </p>
+            </ul>
+          </section>
 
-          <h2 className="section-title">Achievements</h2>
-          <p className="info-item">
-            Completed a 4-week virtual internship in Web Development with Hex
-            Softwares (Sept 10 - Oct 10)
-          </p>
+          <section aria-labelledby="achievements">
+            <h2 id="achievements" className="section-title">Achievements</h2>
+            <p className="info-item">
+              Completed a 4-week virtual internship in Web Development with Hex
+              Softwares (Sept 10 - Oct 10)
+            </p>
+          </section>
 
-          <h2 className="section-title">Skills</h2>
-          <ul className="skills-list">
-            <li>Java, Python, HTML5, CSS</li>
-            <li>Data Analysis, SQL</li>
-          </ul>
+          <section aria-labelledby="skills">
+            <h2 id="skills" className="section-title">Skills</h2>
+            <ul className="skills-list">
+              <li>Java</li>
+              <li>Python</li>
+              <li>HTML5</li>
+              <li>CSS</li>
+              <li>Data Analysis</li>
+              <li>SQL</li>
+            </ul>
+          </section>
 
-          <Link to="/contact" className="contact-button">
+          <Link to="/contact" className="contact-button" aria-label="Contact Ganesh">
             Contact Me
           </Link>
-        </div>
+        </article>
       </div>
-    </div>
+    </main>
   );
 }
 
 function Contact() {
   return (
-    <div className="contact-page">
+    <main className="contact-page" role="main">
       <div className="contact-card">
         <h1>Contact Ganesh</h1>
         <p>
           Email:{" "}
-          <a href="mailto:omganeshbhosalepatil@gmail.com">
-            omganeshbhosalepatil@gmail.com
-          </a>
+          <a href="mailto:omganeshbhosalepatil@gmail.com">omganeshbhosalepatil@gmail.com</a>
         </p>
         <p>
-          Phone: <a href="tel:+8421987447">+91 8421987447</a>
+          Phone: <a href="tel:+918421987447">+91 8421987447</a>
         </p>
-        <Link to="/" className="back-button">
+        <Link to="/" className="back-button" aria-label="Back to Home">
           ← Back to Home
         </Link>
       </div>
-    </div>
+    </main>
   );
 }
 
